@@ -1,11 +1,11 @@
 {
-  "name": "@pancakeswap-libs/pancake-swap-core",
-  "description": "🎛 Core contracts for the pancake protocol",
+  "name": "@pantherswap-libs/panther-swap-core",
+  "description": "Core contracts for the panther protocol",
   "version": "0.1.0",
-  "homepage": "https://pancakeswap.finance",
+  "homepage": "https://pantherswap.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pancakeswap/pancake-swap-core.git"
+    "url": "https://github.com/pantherswap/panther-swap-core.git"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
