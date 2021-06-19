@@ -1,6 +1,6 @@
-# PantherSwap Factory
+# EveSwap Factory
 
-In-depth documentation on PancakeSwap is available at [docs.pantherswap.com](https://docs.pantherswap.com/).
+In-depth documentation on EveSwap is available at eveswap.finance/docs
 
 # Local Development
 
