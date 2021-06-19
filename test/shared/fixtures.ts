@@ -5,8 +5,8 @@ import { deployContract } from 'ethereum-waffle'
 import { expandTo18Decimals } from './utilities'
 
 import ERC20 from '../../build/ERC20.json'
-import PantherFactory from '../../build/PantherFactory.json'
-import PantherPair from '../../build/PantherPair.json'
+import AppleFactory from '../../build/AppleFactory.json'
+import ApplePair from '../../build/ApplePair.json'
 
 interface FactoryFixture {
   factory: Contract
@@ -17,7 +17,7 @@ const overrides = {
 }
 
 export async function factoryFixture(_: Web3Provider, [wallet]: Wallet[]): Promise<FactoryFixture> {
-  const factory = await deployContract(wallet, PantherFactory, [wallet.address], overrides)
+  const factory = await deployContract(wallet, AppleFactory, [wallet.address], overrides)
   return { factory }
 }
 
@@ -35,7 +35,7 @@ export async function pairFixture(provider: Web3Provider, [wallet]: Wallet[]): P
 
   await factory.createPair(tokenA.address, tokenB.address, overrides)
   const pairAddress = await factory.getPair(tokenA.address, tokenB.address)
-  const pair = new Contract(pairAddress, JSON.stringify(PantherPair.abi), provider).connect(wallet)
+  const pair = new Contract(pairAddress, JSON.stringify(ApplePair.abi), provider).connect(wallet)
 
   const token0Address = (await pair.token0()).address
   const token0 = tokenA.address === token0Address ? tokenA : tokenB
