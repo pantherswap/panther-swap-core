@@ -6,8 +6,8 @@ import './libraries/SafeMath.sol';
 contract PantherERC20 is IPantherERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'PantherSwap LPs';
-    string public constant symbol = 'PANTHER-LP';
+    string public constant name = 'Apple LPs';
+    string public constant symbol = 'APPLE-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
